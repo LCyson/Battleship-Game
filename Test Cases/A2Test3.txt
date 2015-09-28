@@ -1,0 +1,119 @@
+CSCI 201L Assignment #2
+2.5% of course grade
+Spring 2015
+
+GRADING CRITERIA AND TEST CASES
+
+Check the following the following scenarios. If the program fails a task, mark off the associated point values. It is essential report the test number and a small description of what went wrong to the student on blackboard. This way, they may go back and check for themselves. If at any point, you cannot perform a test, you may list the test number, and the total for the test and “Incomplete” as the description.
+
+Category and % of Grade	Criteria	KEY
+File I/O 0.75%		
+0.1% - 	Reads in high-scores.	A
+0.2% - 	Reads in battleship map.	B
+0.2% -	Hard files are handled correctly.	C
+0.25% - 	Outputs correct update to file when a high-score is made.	D
+GUI 1.0%		
+0.1% - 	Window is set-up as described.	E
+0.2% - 	Grid is set-up with letters/numbers on the sides.	F
+0.2% - 	A High scores list is displayed to the right of the game board.	G
+0.2% - 	The end screen displays the message, scoreboard, and individual score.	H
+0.3% - 	Layout/formatting resembles the samples shown.	I
+Game 0.75%		
+0.1% - 	The game only accepts valid input.	J
+0.35% - 	The game responds correctly to ships being hit/sunk.	K
+0.3% - 	The game board updates correctly on each valid move.	L
+
+Before testing: Drag and drop the provided test files into the src/ folder of the student’s assignment.
+
+Note to students: We used the exact .txt file given to you as a sample to test basic features of your program. 
+
+
+Test 1:
+Run the program, and enter “src/A2Test1.txt”
+Try to resize the window.
+Inspect the title of the window.
+After the window pops up, exit it by clicking the X on the window.
+•	The window is resizable -0.033% (E)
+•	The window is not labeled. – 0.034% (E)
+•	The window does not close from the ‘X’ -0.033% (E)
+Total: 0.1%
+
+Test 2:
+Re-run the program, enter “src/A2Test1.txt”
+Inspect the grid.
+Inspect the high-scores table.
+•	The grid is not 10x10, or is not formatted correctly -0.1%(F)
+•	The grid does not include labels -0.1%(F)
+•	There is no high-scores board to the right of the game board -0.2%(G)
+Total: 0.4%
+
+Test 3:
+Re-run the program, enter “src/A2Test2.txt”
+Make sure the high-scores table corresponds with the new file.
+Type in coordinates
+A1,A2,A3,A4,A5
+B1,B2
+C2,C3
+D1,D2,D3
+E5,E6,E7,E8
+You should notice the ships are uncovered correspond to the text file.
+You should also notice messages as ships are uncovered/sunk.
+You should also notice the game board update graphically with each move.
+•	The correct high-scores were not read in from A2Test2.txt -0.1% (A)
+•	The correct map was not read in from A2Test2.txt -0.1% (B)
+•	The game did not respond correctly to ships being hit/sunk. -0.15% (K)
+•	The game board updates graphically on each move -0.15% (L)
+Total: 0.5%
+
+Test 4:
+Re-run the program, enter “src/A2Test1.txt”
+Go ahead and type in the following coordinates to win the game:
+A6, A7, A8, A9
+C3, C4, C5, C6, C7
+E5, F5
+G3, H3, I3
+I5, I6
+You should notice the ships are uncovered correspond to the text file.
+You should also notice messages as ships are uncovered/sunk.
+You should also notice the game board update graphically with each move.
+Enter your name as ‘Grader’. You should get 1st place.
+You should see the win-screen at the end with the correct information.
+•	The game did not respond correctly to ships being hit/sunk. -0.2% (K)
+•	The game board updates graphically on each move -0.15% (L)
+•	The correct map was not read in from A2Test1.txt -0.1% (B)
+•	The end screen does not display a thank you message -0.05% (H)
+•	The end screen does not display the individual’s score -0.05% (H)
+•	The end screen does not display the updated leaderboard -0.1% (H)
+Total: 0.6.5%
+
+Test 5:
+Re-run the program, enter “src/A2Test1.txt”
+You should see the updated leaderboard with ‘Grader’
+Enter the coordinates A1,A1 You should get a message warning that it was a repeat.
+Enter the coordinates 72-G You should get a message warning that it was an invalid coordinate.
+•	The leaderboard was not updated from previous games. -0.25% (D)
+•	On repeated moves, the game counter increased -0.05% (J)
+•	The game could not handle invalid coordinate entry -0.05% (J)
+Total: 0.35%
+
+Test 6:
+Re-run the program, enter “src/A2Test3.txt”.
+The program should not accept this, and not crash.
+Re-run the program, enter “src/A2Test4.txt”.
+The program should accept this, and not crash check A1 A2 B1 B2. These should be destroyers. The positioning of the ships don’t matter. (A1/B1)&(A2/B2) VS (A1/A2)&(B1/B2) either is fine.
+•	The invalid file was accepted, or crashed the program -0.1% (C)
+•	The tricky Battleship configuration file was not handled. – 0.1% (C)
+Total: 0.1%
+
+Test 6:
+Reflect on the visual appearance of the program.
+Pick one:
+•	The layout of the components made the program impossible to use. -0.3% (I)
+•	The layout of the components looked messy. -0.2% (I)
+•	The layout of the components looked slightly off. -0.1% (I)
+Total: 0.3%
+
+Note: This is a bit subjective – be forgiving. Most students should get full credit.
+“Impossible to use” – Components are hidden or so out of place it is difficult to find them.
+“Messy” – Minimal effort was put into the entire layout.
+“Slightly off” – One or two components were out of place.
